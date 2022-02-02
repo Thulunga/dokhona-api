@@ -17,7 +17,7 @@ mongoose.connect(
     });
 
 app.get('/', (req, res) => {
-    res.send(process.env.MONGO_URL);
+    res.send(`<h1>Hello World</h1>`);
 })
 
 app.listen(port, () => {
