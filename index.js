@@ -17,7 +17,7 @@ mongoose.connect(
     });
 
 app.get('/', (req, res) => {
-    res.send('Hello World Thulunga Basumatary what are you doing!');
+    res.send(process.env.MONGO_URL);
 })
 
 app.listen(port, () => {
