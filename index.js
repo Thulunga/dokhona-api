@@ -1,12 +1,15 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 
 let port = process.env.PORT || 3000;
 
 mongoose.connect(
-    'mongodb+srv://Thulunga:Tbasum398@cluster0.szsdt.mongodb.net/dokhona?retryWrites=true&w=majority', { useNewUrlParser: true }
+    process.env.MONGO_URL, { useNewUrlParser: true }
     ).then(() => {
         console.log('Connected to database');
     }).catch(err => {
