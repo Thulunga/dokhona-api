@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const userRouter = require('./routes/user');
-
+const authRouter = require('./routes/auth');
 
 dotenv.config();
 
@@ -22,11 +22,13 @@ mongoose.connect(
 
 app.use(express.json());
 app.get('/', (req, res) => {
-    res.send(`<h1>Hi this is Thulunga Basumatary. You are well come here.</h1>`);
+    res.send(`<h1>Hi Alien</h1>`);
 })
 
 
 app.use('/api/users', userRouter);
+app.use('/api/auth', authRouter);
+
 
 
 
