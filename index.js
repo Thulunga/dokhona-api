@@ -7,7 +7,8 @@ const authRouter = require('./routes/auth');
 const productRouter = require('./routes/product');
 const cartRouter = require('./routes/cart');
 const orderRouter = require('./routes/order')
-
+const stripeRoute = require("./routes/stripe");
+const cors = require("cors");
 
 dotenv.config();
 
@@ -29,12 +30,14 @@ app.get('/', (req, res) => {
     res.send(`<h1>Hi Alien</h1>`);
 })
 
-
+app.use(cors());
 app.use('/api/users', userRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/products', productRouter);
 app.use('/api/carts', cartRouter);
 app.use('/api/orders', orderRouter);
+app.use("/api/checkout", stripeRoute);
+
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
