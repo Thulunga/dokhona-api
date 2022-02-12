@@ -1,7 +1,6 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -20,5 +19,15 @@
   },
   "engines": {
     "node": ">=8.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thulunga/dokhona-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Thulunga/dokhona-api/issues"
+  },
+  "homepage": "https://github.com/Thulunga/dokhona-api#readme",
+  "description": ""
 }
