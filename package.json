@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "author": "Thulunga Basumatary",
   "license": "ISC",
@@ -18,7 +18,7 @@
     "stripe": "^8.202.0"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": "12.11.1"
   },
   "devDependencies": {},
   "repository": {
